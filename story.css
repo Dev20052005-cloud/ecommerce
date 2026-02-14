@@ -1,0 +1,271 @@
+/* story.css – dedicated styles for "our story" page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #fcfaf7;
+    color: #3f4a3f;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* ----- header (same as main site for consistency) ----- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #ffffffd9;
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid #e2e0d8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #4d6b4d;
+}
+
+.logo i {
+    font-size: 1.8rem;
+    color: #8bb38a;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4e5e4e;
+    font-weight: 300;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+}
+
+nav a:hover {
+    color: #2f4d2f;
+    border-bottom-color: #b3c9b0;
+}
+
+nav a.active {
+    color: #2f4d2f;
+    border-bottom: 2px solid #8bb38a;
+    font-weight: 400;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+    color: #4e6b4e;
+}
+
+.header-icons i {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.header-icons i:hover {
+    transform: scale(1.1);
+    color: #2b402b;
+}
+
+#cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #b1c7aa;
+    color: #253225;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 20px;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* ----- story page specific styles ----- */
+.page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin: 2.5rem 0 1rem;
+    color: #3f583f;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+.story-container {
+    max-width: 1000px;
+    margin: 2rem auto 4rem;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.story-block {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 60px;
+    padding: 2.2rem 2.5rem;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.02);
+    border: 1px solid #ece7dd;
+    transition: transform 0.2s;
+}
+
+.story-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(110, 130, 100, 0.08);
+}
+
+.story-block:nth-child(even) {
+    flex-direction: row-reverse;
+    background: #f2f6ef;
+}
+
+.story-icon {
+    font-size: 4rem;
+    background: #dde8da;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #486548;
+    flex-shrink: 0;
+    box-shadow: 0 6px 14px rgba(100, 120, 100, 0.1);
+}
+
+.story-text h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: #3b533b;
+}
+
+.story-text p {
+    font-weight: 300;
+    color: #546d54;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* ethos banner */
+.ethos-banner {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 2rem 5% 4rem;
+    padding: 2rem 0;
+    border-top: 1px dashed #cfd6c4;
+    border-bottom: 1px dashed #cfd6c4;
+}
+
+.ethos-banner div {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #486348;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ethos-banner i {
+    color: #719371;
+    font-size: 1.7rem;
+}
+
+/* ----- footer (same as main site) ----- */
+footer {
+    background-color: #e9e7df;
+    padding: 3rem 5% 1.5rem;
+    color: #3f523f;
+    border-top: 1px solid #d1cfc4;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-col h4 {
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    color: #435a43;
+    letter-spacing: 1px;
+}
+
+.footer-col p, .footer-col ul {
+    font-weight: 300;
+    color: #576d57;
+    font-size: 0.95rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.4rem;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #5b745b;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #253f25;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: #5e7a5e;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    border-top: 1px dashed #c9cfbf;
+    color: #6e806e;
+}

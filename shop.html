@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plan nursery · aesthetic</title>
+    <!-- single CSS for all pages -->
+    <link rel="stylesheet" href="shop.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- ========== HEADER (shared) ========== -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-seedling"></i>
+            <span>plan nursery</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="?page=shop" class="nav-link" data-page="shop">shop</a></li>
+                <li><a href="?page=story" class="nav-link" data-page="story">our story</a></li>
+                <li><a href="?page=care" class="nav-link" data-page="care">plant care</a></li>
+                <li><a href="?page=journal" class="nav-link" data-page="journal">journal</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-bag" id="cart-icon"><span class="cart-count">0</span></i>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT (changes per page) ========== -->
+    <main id="main-content">
+        <!-- dynamic content injected by JavaScript -->
+    </main>
+
+    <!-- ========== FOOTER (shared) ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>plan nursery</h4>
+                <p>Curated plants, ceramic pots & mindful living.</p>
+                <div class="social">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-tiktok"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>help</h4>
+                <ul>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">plant care</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>about</h4>
+                <ul>
+                    <li><a href="#">our story</a></li>
+                    <li><a href="#">sustainability</a></li>
+                    <li><a href="#">journal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© 2025 plan nursery · aesthetic simplicity</div>
+    </footer>
+
+    <!-- single javascript file -->
+    <script src="shop.js"></script>
+</body>
+</html>

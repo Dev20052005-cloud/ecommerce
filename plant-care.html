@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Care · plan nursery</title>
+    <!-- separate CSS file -->
+    <link rel="stylesheet" href="care.css">
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- header (consistent with site identity) -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-seedling"></i>
+            <span>plan nursery</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="story.html">our story</a></li>
+                <li><a href="care.html" class="active">plant care</a></li>
+                <li><a href="journal.html">journal</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-search" id="search-icon"></i>
+            <i class="fas fa-shopping-bag" id="cart-icon"><span class="cart-count">0</span></i>
+        </div>
+    </header>
+
+    <!-- main plant care content -->
+    <main>
+        <h1 class="page-title">plant care</h1>
+        <p class="page-subtitle">simple wisdom for happy plants</p>
+
+        <!-- care cards grid (core content) -->
+        <div class="care-grid">
+            <div class="care-card" data-tip="Water when top inch of soil is dry. Most plants dislike soggy feet.">
+                <i class="fas fa-tint"></i>
+                <h3>watering</h3>
+                <p>Most indoor plants like their soil to dry slightly between waterings. Stick a finger in — if dry an inch down, it’s time.</p>
+            </div>
+            <div class="care-card" data-tip="Bright, indirect light is ideal. Direct sun can scorch leaves.">
+                <i class="fas fa-sun"></i>
+                <h3>light</h3>
+                <p>Bright, indirect light is the sweet spot. South or east windows usually work wonders. Rotate occasionally.</p>
+            </div>
+            <div class="care-card" data-tip="Mist leaves or use a pebble tray to boost humidity around tropical plants.">
+                <i class="fas fa-seedling"></i>
+                <h3>humidity</h3>
+                <p>Tropical plants adore humidity. Mist them or set on a pebble tray. They’ll reward you with glossy leaves.</p>
+            </div>
+            <div class="care-card" data-tip="Always use clean, sharp shears. Cut just above a leaf node.">
+                <i class="fas fa-cut"></i>
+                <h3>pruning</h3>
+                <p>Snip yellow leaves and leggy stems to encourage bushy growth. Always use clean shears.</p>
+            </div>
+            <div class="care-card" data-tip="Feed monthly in spring/summer with a balanced liquid fertiliser.">
+                <i class="fas fa-leaf"></i>
+                <h3>feeding</h3>
+                <p>Feed monthly in spring‑summer with a balanced liquid fertiliser. Rest in winter — no food needed.</p>
+            </div>
+            <div class="care-card" data-tip="When roots peek out the bottom, pot up to a container 2” wider.">
+                <i class="fas fa-home"></i>
+                <h3>repotting</h3>
+                <p>When roots peek out the bottom, it’s time to pot up. Choose a pot 2” wider and fresh soil.</p>
+            </div>
+        </div>
+
+        <!-- quick reference / seasonal tip banner -->
+        <div class="seasonal-tip">
+            <i class="fas fa-spa"></i>
+            <span>spring awakening: increase watering gradually as days lengthen.</span>
+        </div>
+
+        <!-- detailed care accordion (extra interactive) -->
+        <div class="care-accordion">
+            <h2>deeper dives <i class="fas fa-angle-down"></i></h2>
+            <div class="accordion-item">
+                <div class="accordion-title">🌿 identifying common pests</div>
+                <div class="accordion-content">
+                    <p>Mealybugs look like cotton, spider mites leave fine webbing, and scale are brownish bumps. Wipe leaves with neem oil solution to treat.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">💧 bottom watering vs top watering</div>
+                <div class="accordion-content">
+                    <p>Bottom watering encourages deep root growth and avoids wetting foliage. Place pot in a tray of water for 20 minutes, then drain.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">🪴 choosing the right potting mix</div>
+                <div class="accordion-content">
+                    <p>Succulents need fast-draining mix; aroids prefer chunky, bark-based soil. Never use garden soil in containers.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>plan nursery</h4>
+                <p>Curated plants, ceramic pots & mindful living.</p>
+                <div class="social">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-tiktok"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>help</h4>
+                <ul>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="care.html">plant care</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>about</h4>
+                <ul>
+                    <li><a href="story.html">our story</a></li>
+                    <li><a href="#">sustainability</a></li>
+                    <li><a href="journal.html">journal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© 2025 plan nursery · aesthetic simplicity</div>
+    </footer>
+
+    <!-- separate javascript file -->
+    <script src="care.js"></script>
+</body>
+</html>

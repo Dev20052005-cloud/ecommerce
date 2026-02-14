@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal · plan nursery</title>
+    <!-- separate CSS file -->
+    <link rel="stylesheet" href="journal.css">
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- header (consistent with site identity) -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-seedling"></i>
+            <span>plan nursery</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="story.html">our story</a></li>
+                <li><a href="care.html">plant care</a></li>
+                <li><a href="journal.html" class="active">journal</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-search" id="search-icon"></i>
+            <i class="fas fa-shopping-bag" id="cart-icon"><span class="cart-count">0</span></i>
+        </div>
+    </header>
+
+    <!-- main journal content -->
+    <main>
+        <h1 class="page-title">journal</h1>
+        <p class="page-subtitle">thoughts on greenery & slowness</p>
+
+        <!-- featured journal entry (hero style) -->
+        <div class="featured-entry">
+            <div class="featured-image">🌿</div>
+            <div class="featured-content">
+                <span class="entry-date">APRIL 5, 2025</span>
+                <h2>the gentle art of tending</h2>
+                <p class="entry-excerpt">Caring for plants teaches us patience, presence, and the beauty of slow growth. A reflection on what our green companions whisper to us every day.</p>
+                <button class="read-more" data-entry="featured">read entry →</button>
+            </div>
+        </div>
+
+        <!-- journal grid (regular entries) -->
+        <div class="journal-grid">
+            <!-- entry 1 -->
+            <div class="journal-entry">
+                <div class="journal-image">📝</div>
+                <div class="journal-content">
+                    <div class="journal-date">MARCH 12, 2025</div>
+                    <div class="journal-title">the zen of pruning</div>
+                    <div class="journal-excerpt">A quiet afternoon with shears can reshape not only your plant but your state of mind...</div>
+                    <button class="read-more" data-entry="pruning">read more →</button>
+                </div>
+            </div>
+            <!-- entry 2 -->
+            <div class="journal-entry">
+                <div class="journal-image">☕</div>
+                <div class="journal-content">
+                    <div class="journal-date">FEBRUARY 28, 2025</div>
+                    <div class="journal-title">cozy plants for winter</div>
+                    <div class="journal-excerpt">Snake plants, ZZ, and peace lilies — the trio that thrives while you hibernate.</div>
+                    <button class="read-more" data-entry="cozy">read more →</button>
+                </div>
+            </div>
+            <!-- entry 3 -->
+            <div class="journal-entry">
+                <div class="journal-image">🌱</div>
+                <div class="journal-content">
+                    <div class="journal-date">JANUARY 15, 2025</div>
+                    <div class="journal-title">propagation 101</div>
+                    <div class="journal-excerpt">Turn one plant into many with these simple water‑propagation tricks.</div>
+                    <button class="read-more" data-entry="propagation">read more →</button>
+                </div>
+            </div>
+            <!-- entry 4 -->
+            <div class="journal-entry">
+                <div class="journal-image">🍂</div>
+                <div class="journal-content">
+                    <div class="journal-date">DECEMBER 3, 2024</div>
+                    <div class="journal-title">winter light adjustments</div>
+                    <div class="journal-excerpt">As days grow short, learn how to position your plants for maximum winter light.</div>
+                    <button class="read-more" data-entry="winter">read more →</button>
+                </div>
+            </div>
+            <!-- entry 5 -->
+            <div class="journal-entry">
+                <div class="journal-image">🪴</div>
+                <div class="journal-content">
+                    <div class="journal-date">NOVEMBER 18, 2024</div>
+                    <div class="journal-title">choosing the right pot</div>
+                    <div class="journal-excerpt">Terracotta, ceramic, or plastic? A guide to matching pots to your plant's personality.</div>
+                    <button class="read-more" data-entry="pots">read more →</button>
+                </div>
+            </div>
+            <!-- entry 6 -->
+            <div class="journal-entry">
+                <div class="journal-image">✨</div>
+                <div class="journal-content">
+                    <div class="journal-date">OCTOBER 7, 2024</div>
+                    <div class="journal-title">pet‑friendly plants</div>
+                    <div class="journal-excerpt">Beautiful greenery that's safe for cats and dogs — a curated list for plant lovers with fur babies.</div>
+                    <button class="read-more" data-entry="pet">read more →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- newsletter signup (aesthetic touch) -->
+        <div class="newsletter">
+            <i class="fas fa-paper-plane"></i>
+            <p>subscribe to journal updates — gentle notes from the nursery</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="your email" required>
+                <button type="submit">send</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>plan nursery</h4>
+                <p>Curated plants, ceramic pots & mindful living.</p>
+                <div class="social">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-tiktok"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>help</h4>
+                <ul>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="care.html">plant care</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>about</h4>
+                <ul>
+                    <li><a href="story.html">our story</a></li>
+                    <li><a href="#">sustainability</a></li>
+                    <li><a href="journal.html">journal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© 2025 plan nursery · aesthetic simplicity</div>
+    </footer>
+
+    <!-- separate javascript file -->
+    <script src="journal.js"></script>
+</body>
+</html>

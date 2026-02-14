@@ -1,0 +1,393 @@
+/* journal.css – dedicated journal page with aesthetic & interactive styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #fcfaf7;
+    color: #3f4a3f;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* ----- header (consistent identity) ----- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #ffffffd9;
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid #e2e0d8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #4d6b4d;
+}
+
+.logo i {
+    font-size: 1.8rem;
+    color: #8bb38a;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4e5e4e;
+    font-weight: 300;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+}
+
+nav a:hover {
+    color: #2f4d2f;
+    border-bottom-color: #b3c9b0;
+}
+
+nav a.active {
+    color: #2f4d2f;
+    border-bottom: 2px solid #8bb38a;
+    font-weight: 400;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+    color: #4e6b4e;
+}
+
+.header-icons i {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.header-icons i:hover {
+    transform: scale(1.1);
+    color: #2b402b;
+}
+
+#cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #b1c7aa;
+    color: #253225;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 20px;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* ----- journal specific styles ----- */
+.page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin: 2.5rem 0 0.5rem;
+    color: #3f583f;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-weight: 300;
+    color: #657e65;
+    margin-bottom: 3rem;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+/* featured entry */
+.featured-entry {
+    max-width: 1100px;
+    margin: 2rem auto 3rem;
+    padding: 0 5%;
+    display: flex;
+    background: linear-gradient(135deg, #f3f7ef, #e9f0e3);
+    border-radius: 80px;
+    overflow: hidden;
+    border: 1px solid #dde2d1;
+    box-shadow: 0 12px 28px rgba(80, 100, 80, 0.08);
+}
+
+.featured-image {
+    flex: 1;
+    font-size: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cbd9c0;
+    color: #3c603c;
+    min-width: 200px;
+}
+
+.featured-content {
+    flex: 2;
+    padding: 2.5rem 2.5rem 2.5rem 2rem;
+}
+
+.entry-date {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #819a81;
+    text-transform: uppercase;
+}
+
+.featured-content h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin: 0.5rem 0 1rem;
+    color: #395239;
+}
+
+.entry-excerpt {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #556d55;
+    margin-bottom: 1.8rem;
+}
+
+.read-more {
+    background: none;
+    border: 1px solid #9fb49f;
+    padding: 0.6rem 2rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    color: #3e5f3e;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    display: inline-block;
+}
+
+.read-more:hover {
+    background: #e1eedb;
+    border-color: #7d9f7d;
+}
+
+/* journal grid */
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1300px;
+    margin: 3rem auto;
+    padding: 0 5%;
+}
+
+.journal-entry {
+    background: white;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s, box-shadow 0.3s;
+    border: 1px solid #edeadf;
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-entry:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px rgba(90, 110, 90, 0.08);
+}
+
+.journal-image {
+    height: 160px;
+    background: #dbd9cb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #556f55;
+    background: linear-gradient(145deg, #dadfcb, #c7cfbc);
+}
+
+.journal-content {
+    padding: 1.8rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-date {
+    font-size: 0.8rem;
+    color: #8e9f8e;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.journal-title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #395239;
+}
+
+.journal-excerpt {
+    font-weight: 300;
+    color: #5d705d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* newsletter */
+.newsletter {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    text-align: center;
+    background: #f2f6ed;
+    border-radius: 80px;
+    border: 1px solid #d7dfcc;
+}
+
+.newsletter i {
+    font-size: 2.5rem;
+    color: #769676;
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #3b583b;
+    margin-bottom: 1.8rem;
+}
+
+#newsletter-form {
+    display: flex;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+#newsletter-form input {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #cbd2bd;
+    border-radius: 40px;
+    background: white;
+    font-size: 1rem;
+    color: #3f4f3f;
+    outline: none;
+}
+
+#newsletter-form input:focus {
+    border-color: #8eb38b;
+    box-shadow: 0 0 0 2px #e0f0dd;
+}
+
+#newsletter-form button {
+    background: #5b7c5b;
+    border: none;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+#newsletter-form button:hover {
+    background: #436243;
+}
+
+/* footer (shared) */
+footer {
+    background-color: #e9e7df;
+    padding: 3rem 5% 1.5rem;
+    color: #3f523f;
+    border-top: 1px solid #d1cfc4;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-col h4 {
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    color: #435a43;
+    letter-spacing: 1px;
+}
+
+.footer-col p, .footer-col ul {
+    font-weight: 300;
+    color: #576d57;
+    font-size: 0.95rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.4rem;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #5b745b;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #253f25;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: #5e7a5e;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    border-top: 1px dashed #c9cfbf;
+    color: #6e806e;
+}
